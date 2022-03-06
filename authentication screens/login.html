@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+        .body{
+            margin: 0;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            font-size: var(--md);
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            height: 50px;
+        }
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
+            .secundary-button{
+                position: relative;
+                top: 100%;
+            }
+        }
+        .forgot-password{
+            text-align: center;
+        }
+        .forgot-password a{
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
+        .secundary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            font-size: var(--md);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            height: 50px;
+            border-color: var(--hospital-green);
+            border-style: solid;
+            border-width: 1.5px;
+            position: relative;
+            top: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="/assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
+    
+            <form action="/" class="form">
+                <label for="password" class="label">Email address</label>
+                <input type="email" name="password" id="password" class="input input-password" placeholder="yardsale@gmail.com">
+                
+                <label for="new-password" class="label">Password</label>
+                <input type="password" name="new-password" id="new-password" class="input input-password" placeholder="********">
+            
+                <input type="button" value="Log in" class="primary-button login-button"> 
+            </form>
+            <p class="forgot-password"><span><a href="#">forgot my password</a></span></p>
+
+            <input type="button" value="Sign in" class="secundary-button">
+        </div>
+    </div>
+</body>
+</html>
