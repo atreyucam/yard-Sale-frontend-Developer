@@ -1,2 +1,2 @@
-# yard-Sale---frontend-Developer
+# yard-Sale - frontend-Developer
 frontend developer project showing screenshots of a store.
